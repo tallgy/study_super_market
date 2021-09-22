@@ -1,30 +1,23 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-view></router-view>
+    <main-tab-bar></main-tab-bar>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import main_tab_bar from './components/content/mainTabBar/mainTabBar';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'nav',
+  components: {
+    main_tab_bar
   }
 }
+
+</script>
+
+<style lang="scss">
+  //这里使用了别名配置，详情看 vue.config.js
+  @import "assets/css/base.css";
 </style>
