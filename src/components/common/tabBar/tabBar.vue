@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 
-#tab-bar {
+#tab_bar {
   display: flex;
   background-color: #f6f6f6;
 

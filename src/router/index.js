@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import cart from '../views/cart/cart'
-import category from '../views/category/category'
 
 const Home = () => import('../views/home/home');
 const Category = () => import('../views/category/category');
@@ -10,6 +8,10 @@ const Profile = () => import('../views/profile/profile');
 const routes = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     component: Home
   },
   {

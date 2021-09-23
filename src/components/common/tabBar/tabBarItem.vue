@@ -1,8 +1,8 @@
 <template>
-  <div class="tab-bar-item">
+  <div class="tab-bar-item" @click="itemClick">
     <slot v-if="!isActive" name="item-icon"></slot>
     <slot v-else name="item-icon-active"></slot>
-    <div :style="activeColor">
+    <div :style="activeStyle">
       <slot name="item-text"></slot>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      // isActive: true,
+
     };
   },
   computed: {
@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .tab-bar-item {
   flex: 1;
   text-align: center;

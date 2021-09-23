@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import main_tab_bar from './components/content/mainTabBar/mainTabBar';
+import mainTabBar from 'components/content/mainTabBar/mainTabBar';
 
 export default {
   name: 'nav',
   components: {
-    main_tab_bar
+    mainTabBar
   }
 }
 
