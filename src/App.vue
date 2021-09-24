@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    <button @click="toast">test</button>
     <router-view></router-view>
     <main-tab-bar></main-tab-bar>
   </div>
@@ -12,6 +13,11 @@ export default {
   name: 'nav',
   components: {
     mainTabBar
+  },
+  methods: {
+    toast() {
+      this.$toast.show('qqq', 2000);
+    }
   }
 }
 
